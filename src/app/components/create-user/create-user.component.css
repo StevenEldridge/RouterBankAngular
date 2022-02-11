@@ -1,0 +1,73 @@
+@media (max-width: 800px) {
+  .component {
+    text-align: center;
+    margin-top: 40px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  button {
+    font-size: 2em;
+  }
+
+  label {
+    width: 100%;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 80%;
+    text-align: center;
+  }
+
+  .form-input {
+
+  }
+}
+
+@media (min-width: 801px) {
+  .component {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.3em;
+  }
+
+  button {
+    font-size: 1.5em;
+  }
+
+  label {
+    width: 10.7em;
+    text-align: right;
+  }
+
+  input {
+    width: 60%;
+  }
+
+  .form-input {
+    text-align: center;
+  }
+}
+
+p {
+  margin-bottom: 40px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.form-input {
+  margin-top: 20px;
+
+}
+
+.error {
+  color: darkred;
+  margin-top: 20px;
+}
+
+label {
+  display: inline-block;
+  margin-right: 15px;
+}

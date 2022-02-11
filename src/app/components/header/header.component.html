@@ -1,0 +1,17 @@
+<div class="header">
+  <div class="left-item">
+    <button
+      class="nav-button"
+      *ngIf="windowWidth < 601"
+      (click)="updateShowNavBar()"
+    >
+      =
+    </button>
+    {{ pathName }}
+  </div>
+  <div class="right-item">
+    <span *ngIf="windowWidth >= 601">Routez: </span>
+    <span>{{ (bankAccount.checkbal + bankAccount.savebal).toFixed(2) }}</span>
+    <span *ngIf="windowWidth < 601"> Rz</span>
+  </div>
+</div>

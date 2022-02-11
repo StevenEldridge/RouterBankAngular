@@ -1,0 +1,87 @@
+<div class="account-overview-component">
+  <h1>Deposit and Withdraw</h1>
+  <app-account-values></app-account-values>
+
+  <form
+    #depositWithdrawForm="ngForm"
+    (ngSubmit)="submit()"
+  >
+    <h2>
+      What action would you like to perform?
+    </h2>
+    <div class="form-radio">
+      <input
+        [(ngModel)]="form.action"
+        type="radio"
+        id="deposit"
+        name="action"
+        value="deposit"
+      >
+      <label for="deposit">Deposit</label>
+    </div>
+    <div class="form-radio">
+      <input
+        [(ngModel)]="form.action"
+        type="radio"
+        id="withdraw"
+        name="action"
+        value="withdraw"
+      >
+      <label for="withdraw">Withdraw</label>
+    </div>
+    <h2>
+      Select an account:
+    </h2>
+    <div class="form-radio">
+      <input
+        [(ngModel)]="form.account"
+        type="radio"
+        id="savings"
+        name="account"
+        value="savings"
+      >
+      <label for="savings">Savings</label>
+    </div>
+    <div class="form-radio">
+      <input
+        [(ngModel)]="form.account"
+        type="radio"
+        id="checking"
+        name="account"
+        value="checking"
+      >
+      <label for="checking">Checking</label>
+    </div>
+    <h2 *ngIf="form.action == 'deposit'">
+      Enter an amount to deposit into {{ form.account }}
+    </h2>
+    <h2 *ngIf="form.action == 'withdraw'">
+      Enter an amount to withdraw from {{ form.account }}
+    </h2>
+    <div>
+      <label for="amount">Amount: </label>
+      <input
+        type="text"
+        id="amount"
+        name="amount"
+        required
+        [(ngModel)]="form.amount"
+      >
+    </div>
+    <button
+      type="submit"
+      style="margin-top: 40px; font-size: 1.6em;"
+      [disabled]="!depositWithdrawForm.form.valid"
+    >
+      {{ form.action }}
+    </button>
+  </form>
+  <div
+    *ngIf="errorMessage"
+    class="error"
+  >
+    <h2>
+      {{ errorMessage }}
+    </h2>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.nav-bar {
+  font-size: 1.2em;
+}
+
+.nav-item {
+  box-sizing: border-box;
+  width: 90%;
+  margin-left: 5%;
+  padding: 15px 0 15px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: #f06f2e;
+}

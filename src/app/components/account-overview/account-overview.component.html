@@ -1,0 +1,26 @@
+<div class="account-overview-component">
+  <h1>Account Overview</h1>
+  <app-account-values></app-account-values>
+
+  <h2 style="margin-bottom: 28px;">Account Details</h2>
+  <h4>Name</h4>
+  <p>{{ userAccount.name }}</p>
+
+  <h4>Username</h4>
+  <p>{{ userAccount.username }}</p>
+
+  <h4>Birthdate</h4>
+  <p>{{ userAccount.birthdate.toString().substring(0, 10) }}</p>
+
+  <h4>Address</h4>
+  <p>{{ userAccount.addr }}</p>
+
+  <h4>Phone Number</h4>
+  <p>{{ userAccount.phone }}</p>
+
+  <h4>Minute Percentage Rate</h4>
+  <p>{{ (bankAccount.mpr * 100).toFixed(2) }}%</p>
+
+  <h4>Interest Enabled/Disabled</h4>
+  <p>{{ mprEnabledDisabled() }}</p>
+</div>

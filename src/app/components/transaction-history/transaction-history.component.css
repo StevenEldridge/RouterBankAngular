@@ -1,0 +1,36 @@
+.transaction-history-component {
+  padding: 20px 5% 0 5%;
+}
+
+.table-boarder {
+  width: 100%;
+  border: 2px solid dimgrey;
+  border-radius: 15px;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 12px 0 12px 0;
+}
+
+tr {
+  border-bottom: 1px solid darkgrey;
+}
+
+table tr:last-child {
+  border-bottom: none;
+}
+
+td {
+  padding: 12px 0 12px 0;
+}
+
+.error {
+  color: darkred;
+  margin-top: 20px;
+}

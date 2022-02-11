@@ -1,0 +1,48 @@
+<div class="component">
+  <h1>Login to Router Bank</h1>
+  <form
+  #loginForm="ngForm"
+  (ngSubmit)="login()"
+  >
+    <div class="form-input">
+      <label for="username">
+        Username:
+      </label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        required
+        [(ngModel)]="model.username"
+      >
+    </div>
+    <div class="form-input">
+      <label for="password">
+        Password:
+      </label>
+      <input
+        type="text"
+        id="password"
+        name="password"
+        required
+        [(ngModel)]="model.password"
+      >
+    </div>
+    <button
+      type="submit"
+      style="margin-top: 40px;"
+      [disabled]="!loginForm.form.valid"
+    >
+      Login
+    </button>
+  </form>
+  <div
+    *ngIf="errorMessage"
+    class="error"
+  >
+    <h2>
+      {{ errorMessage }}
+    </h2>
+  </div>
+</div>
+

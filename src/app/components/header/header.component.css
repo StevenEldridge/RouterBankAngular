@@ -1,0 +1,47 @@
+@media (max-width: 600px) {
+  .left-item {
+    margin-top: -0.3em;
+    margin-left: 10px;
+  }
+
+  .right-item {
+    margin-top: 0.15em;
+    margin-right: 10px;
+  }
+
+  .header {
+    margin-top: 17px;
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 601px) {
+  .left-item {
+    margin-left: 30px;
+  }
+
+  .right-item {
+    margin-right: 30px;
+  }
+
+  .header {
+    margin-top: 15px;
+    font-size: 1.5em;
+  }
+}
+
+.left-item {
+  float: left;
+}
+
+.right-item {
+  float: right;
+}
+
+.nav-button {
+  padding: 0;
+  font-size: 1.3em;
+  width: 1.5em;
+  height: 1.5em;
+  background: #66605f;
+}

@@ -1,0 +1,82 @@
+<div class="interest-component">
+  <h1>Manage Interest</h1>
+  <div class="account-values-component">
+    <h2>Account Balances</h2>
+    <div class="balance-box-container">
+      <div class="balance-box first-box">
+        <h3>
+          Savings Account
+        </h3>
+        <h1>
+          {{ bankAccount.savebal.toFixed(2) }} Routez
+        </h1>
+      </div>
+      <div class="balance-box">
+        <h3>
+          Minute Percentage Rate (MPR)
+        </h3>
+        <h1>
+          {{ (bankAccount.mpr * 100).toFixed(2) }} %
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <form
+    #interestForm="ngForm"
+    (ngSubmit)="submit()"
+  >
+    <h2>
+      Manage your MPR Rate
+    </h2>
+    <div>
+      <label for="amount">Amount: </label>
+      <input
+        type="text"
+        id="amount"
+        name="amount"
+        required
+        [(ngModel)]="form.mprRate"
+      >
+    </div>
+    <h2>
+      Enable or Disable MPR
+    </h2>
+    <div class="form-radio">
+      <input
+        [(ngModel)]="form.mprEnable"
+        type="radio"
+        id="enabled"
+        name="account"
+        value="true"
+      >
+      <label for="enabled">Enabled</label>
+    </div>
+    <div class="form-radio">
+      <input
+        [(ngModel)]="form.mprEnable"
+        type="radio"
+        id="disabled"
+        name="account"
+        value="false"
+      >
+      <label for="disabled">Disabled</label>
+    </div>
+
+    <button
+      type="submit"
+      style="margin-top: 40px; font-size: 1.6em;"
+      [disabled]="!interestForm.form.valid"
+    >
+      Update Interest
+    </button>
+  </form>
+  <div
+    *ngIf="errorMessage"
+    class="error"
+  >
+    <h2>
+      {{ errorMessage }}
+    </h2>
+  </div>
+</div>

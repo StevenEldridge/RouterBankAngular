@@ -1,0 +1,64 @@
+<div class="transfer-component">
+  <h1>Transfer Routez</h1>
+  <app-account-values></app-account-values>
+
+  <form
+    #transferForm="ngForm"
+    (ngSubmit)="submit()"
+  >
+    <h2>
+      What account would you like to transfer Routez to?
+    </h2>
+    <div class="form-radio">
+      <input
+        [(ngModel)]="form.transferTo"
+        type="radio"
+        id="savings"
+        name="account"
+        value="savings"
+      >
+      <label for="savings">Savings</label>
+    </div>
+    <div class="form-radio">
+      <input
+        [(ngModel)]="form.transferTo"
+        type="radio"
+        id="checking"
+        name="account"
+        value="checking"
+      >
+      <label for="checking">Checking</label>
+    </div>
+    <h2 *ngIf="form.transferTo == 'checking'">
+      Amount to transfer from Savings to Checking
+    </h2>
+    <h2 *ngIf="form.transferTo == 'savings'">
+      Amount to transfer from Checking to Savings
+    </h2>
+    <div>
+      <label for="amount">Amount: </label>
+      <input
+        type="text"
+        id="amount"
+        name="amount"
+        required
+        [(ngModel)]="form.amount"
+      >
+    </div>
+    <button
+      type="submit"
+      style="margin-top: 40px; font-size: 1.6em;"
+      [disabled]="!transferForm.form.valid"
+    >
+      Transfer
+    </button>
+  </form>
+  <div
+    *ngIf="errorMessage"
+    class="error"
+  >
+    <h2>
+      {{ errorMessage }}
+    </h2>
+  </div>
+</div>

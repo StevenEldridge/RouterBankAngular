@@ -1,0 +1,13 @@
+.account-overview-component {
+  padding: 20px 5% 0 5%;
+}
+
+h4 {
+  margin-bottom: 4px;
+}
+
+p {
+  color: dimgrey;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}

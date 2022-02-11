@@ -1,0 +1,23 @@
+<div class="transaction-history-component">
+  <h1>
+    Transaction History
+  </h1>
+  <div class="table-boarder">
+    <table>
+      <tr>
+        <th>Transaction Timestamp</th>
+        <th>Withdraw/Deposit</th>
+        <th>Amount</th>
+        <th>Account</th>
+        <th>New Balance</th>
+      </tr>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.tDate }}</td>
+        <td>{{ transaction.act }}</td>
+        <td>{{ transaction.amount.toFixed(2) }}</td>
+        <td>{{ transaction.account }}</td>
+        <td>{{ transaction.newbal.toFixed(2) }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

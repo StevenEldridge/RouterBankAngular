@@ -1,0 +1,30 @@
+.account-overview-component {
+  padding: 20px 5% 0 5%;
+}
+
+form {
+  text-align: left;
+}
+
+.form-radio {
+  padding-bottom: 12px;
+}
+
+label {
+  font-size: 1.2em;
+  color: #363636;
+}
+
+input[type="radio"] {
+  transform: scale(1.5);
+  margin-right: 16px;
+}
+
+input[type="text"] {
+  font-size: 1.1em;
+}
+
+.error {
+  color: darkred;
+  margin-top: 20px;
+}

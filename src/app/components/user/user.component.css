@@ -1,0 +1,55 @@
+@media (max-width: 600px) {
+  app-header {
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    background: #f06f2e;
+    color: white;
+    top: 0;
+    left: 0;
+  }
+
+  app-nav-bar {
+    left: 0;
+    top: 60px;
+    position: fixed;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background: #66605f;
+    color: white;
+  }
+
+  .outlet {
+    margin-top: 60px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) {
+  app-header {
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    background: #f06f2e;
+    color: white;
+    top: 0;
+    left: 0;
+  }
+
+  app-nav-bar {
+    left: 0;
+    top: 60px;
+    position: fixed;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background: #66605f;
+    color: white;
+  }
+
+  .outlet {
+    margin-top: 60px;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+}
+

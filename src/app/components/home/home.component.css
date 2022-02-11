@@ -1,0 +1,26 @@
+@media (max-width: 600px) {
+  .home-component {
+    padding: 20px 5% 0 5%;
+  }
+}
+
+@media (min-width: 601px) {
+  .home-component {
+    padding: 60px 5% 0 5%;
+  }
+}
+
+
+h2 {
+  margin-bottom: 40px;
+}
+
+h4 {
+  margin-bottom: 5px;
+}
+
+p {
+  color: dimgrey;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
