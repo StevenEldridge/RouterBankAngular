@@ -4,20 +4,34 @@
   </h1>
   <div class="table-boarder">
     <table>
-      <tr>
-        <th>Transaction Timestamp</th>
-        <th>Withdraw/Deposit</th>
-        <th>Amount</th>
-        <th>Account</th>
-        <th>New Balance</th>
-      </tr>
-      <tr *ngFor="let transaction of transactions">
-        <td>{{ transaction.tDate }}</td>
-        <td>{{ transaction.act }}</td>
-        <td>{{ transaction.amount.toFixed(2) }}</td>
-        <td>{{ transaction.account }}</td>
-        <td>{{ transaction.newbal.toFixed(2) }}</td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Transaction Timestamp</th>
+          <th>Withdraw/Deposit</th>
+          <th>Amount</th>
+          <th>Account</th>
+          <th>New Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td label="Transaction Time">
+            {{ transaction.tDate }}
+          </td>
+          <td label="Withdraw/Deposit">
+            {{ transaction.act }}
+          </td>
+          <td label="Amount">
+            {{ transaction.amount.toFixed(2) }}
+          </td>
+          <td label="Account">
+            {{ transaction.account }}
+          </td>
+          <td label="New Balance">
+            {{ transaction.newbal.toFixed(2) }}
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </div>
